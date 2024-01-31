@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.main-section {
+  background-image: url('/assets/7-Paiement-de-factures.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: right; /* Alignez les boutons au centre horizontalement */
+  margin-top: 10px; /* Ajoutez une marge en haut pour séparer du texte précédent */
+  position: center;
+}
+.content {
+  color:rgb(75, 159, 238);
+  background-color:  rgb(251, 231, 244);
+  }
+ .text{
+  color:rgb(75, 159, 238);
+  position: Center;
+ }
+ .center-rectangle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.center-rectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;}

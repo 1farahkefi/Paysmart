@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Bill Payment</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      
+    }
+
+/* Style for the navbar */
+.navbar {
+  background-color: rgb(111, 176, 255); /* Set the background color */
+  padding: 10px; /* Add some padding to the navbar */
+  display: flex;
+  justify-content: space-between; /* Align items horizontally with space in between */
+  align-items: center; /* Center items vertically */
+  width:100%;
+  height: 10%;
+}
+
+/* Style for the navbar-brand (PaySmart) */
+.navbar-brand {
+  color: #fff; /* Set the text color */
+  font-size: 1.5rem; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+}
+
+/* Style for the navbar links */
+.navbar-nav {
+  display: flex;
+  align-items: right; /* Center items vertically */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Set the text color */
+  margin-left: 15px; /* Add some left margin between links */
+}
+
+/* Style for the home icon (assuming it's an <i> element with class 'bx bxs-home') */
+.navbar-nav .bx.bxs-home {
+  font-size: 1.5rem; /* Set the icon size */
+  margin-right: 5px; /* Add some right margin between the icon and text */
+}
+
+/* Style for the logout button */
+.btn-link-outline-dark {
+  color: #fff; /* Set the text color */
+}
+
+/* Additional styling for container if needed */
+.container {
+  width: 100%;
+}
+
+
+section {
+  max-width: 400px;
+  margin: 40px;
+  padding: 0px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  margin-top: 20%;
+  max-width: 400%;
+  width: 40%;
+  height: 100%;
+  margin-left: 120px; /* Set the left margin to match the width of the sidebar */
+}
+
+h1 {
+  margin-top: 5%;
+  color: #343a40;
+  text-align: center;
+}
+
+/* ... (rest of your existing CSS) */
+
+
+    .custom-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .custom-dropdown select {
+      padding: 0.5rem;
+      width: 100%;
+      cursor: pointer;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .custom-dropdown img {
+      width: 30px;
+      margin-right: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 7%;
+      margin-bottom: 0.5rem;
+      color: #495057;
+    }
+
+    input {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .radio-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .radio-container label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .radio-container img {
+      width: 50px;
+      margin-top: 5px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 0.75rem;
+      background-color: rgb(111, 176, 255);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+    .container h1 {
+      margin-top: -3%;
+      color: #fff;
+    }
+    *{
+    margin:0;
+    padding:0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display:flex;
+   
+
+}
+.sidebar{
+    position: sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width:120px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color:#fff;
+    
+    transition: all 0.5s linear;
+    background: rgb(75, 159, 238);
+}
+.sidebar:hover{
+    width: 350px;
+    transition: 0.5s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88% ;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+  padding: 1rem;  
+  margin: 8px ;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+.menu li :hover
+.active{
+    background: #e0e0e058;
+  }
+.menu a{
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5 rem;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  /* Fixation de la page */
+}
+
+.sidebar {
+  position: fixed; /* Set position to fixed */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  padding: 0 1.7rem;
+  color: #fff;
+
+  transition: all 0.5s linear;
+  background: rgb(75, 159, 238);
+}
+
+.sidebar:hover {
+  width: 350px;
+  transition: 0.5s;
+}
+
+.logo {
+  height: 80px;
+  padding: 16px;
+}
+
+.menu {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 1rem;
+  margin: 8px;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu li :hover .active {
+  background: #e0e0e058;
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+
+.menu a i {
+  font-size: 1.2rem;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+     <div class="logo">
+      <ul class="menu">
+        <li class="active">
+          <a href="paysmart" (click)="gotopaysmart()" >
+            
+            <span><i class="fas fa-tachometer-alt"> PaySmart</i></span>
+          </a>
+        </li>
+        <li>
+          <a href="settings">
+            <i class="fas fa-cog"></i>
+            <span> <a href="settings" (click)="gotopaysmart()" >Settings</a>
+             </span>
+          </a>
+        </li>
+        <li>
+          <a href="help">
+            <i class="fas fa-question-circle"></i>
+            <span><a href="help" (click)="gotopaysmart()" > Help</a> </span>
+          </a>
+        </li>
+        <li class="Logout">
+          <a href="login" (click)="gotoLogin()">
+            <i class="fas fa-sign-out-alt"></i>
+            <span> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div> 
+</div>
+
+  <div class="main--content ">
+    <div class="header--wrapper">
+      <div class="header--title">
+        <h2>PaySmart</h2>
+      </div>
+      <div class="user--info">
+        <div class="search--box">
+        <i class="fasolid fa--search"></i>
+        <input type="text" placeholder="search"/>
+      </div>
+      <img src="/assets/image.png" alt="">
+      </div>
+    </div>
+    <div class="card--container">
+        <h1>Bill Payment</h1>
+            <form>
+              <label for="billType">Select Bill Type:</label>
+              <div class="custom-dropdown">
+                <select id="billType" name="billType" required>
+                  <option value="steg">
+                    <img src="assets/s1.png" alt="STEG - Société Tunisienne de l'Électricité et du Gaz">
+                    STEG Bill
+                  </option>
+                  <option value="sonede">
+                    <img src="assets/s2.jpg" alt="Sonede - Service des Eaux">
+                    Sonede Bill
+                  </option>
+                  <option value="internet">
+                    <img src="assets/S3.png" alt="Assurance">
+                    Internet Bill
+                  </option>
+                  <option value="registration">
+                    <img src="assets/S4.jpg" alt="Inscription Scolaire">
+                    Student Registration
+                  </option>
+                </select>
+              </div>
+        
+              <label for="cardNumber">Card Number:</label>
+              <input type="text" id="cardNumber" name="cardNumber" required>
+        
+              <label for="expirationDate">Expiration Date:</label>
+              <input type="text" id="expirationDate" name="expirationDate" required>
+        
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" required>
+        
+              <div class="radio-container">
+                <label>
+                  <input type="radio" name="cardType" value="visa">
+                  <div class="card-images">
+                    <img src="/assets/visa.png" alt="Visa">
+                  </div>
+                </label>
+                <label>
+                  <input type="radio" name="cardType" value="masterCard">
+                  <div class="card-images">
+                    <img src="/assets/mastercard.png" alt="MasterCard">
+                  </div>
+                </label>
+              </div>
+        
+              <div class="button-container">
+                <button type="submit">Pay Bill</button>
+                <button type="button" onclick="cancelPayment()">Cancel</button>
+              </div>
+            </form>
+          
+    </div>
+  </div>
+  <script>
+    function gotoLogout() {
+      // Implement logout functionality
+      alert("Logging out...");
+    }
+  </script>
+  
+</body>
+
+</html>

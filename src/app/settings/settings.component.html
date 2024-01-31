@@ -1,0 +1,128 @@
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <style>
+    *{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+  }
+  body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color: #918e8e;
+    background-color:rgb(111, 176, 255); 
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+  }
+  .wrapper {
+width: 480px;
+text-align: center;
+border-color: black;
+background-color: white;
+border-radius: 12px;
+border: 2px;
+padding: 30px 40px;
+}
+
+.wrapper .input-box {
+width: 100%;
+height: 50px;
+margin: 30px 0;
+position: relative;
+}
+
+.input-box input {
+width: 100%;
+height: 100%;
+
+border: 2px solid black;
+border-radius: 40px;
+outline: none;
+padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+position: absolute;
+right: 20px; /* Ajustez la position en fonction de vos besoins */
+top: 30%;
+
+transform: translate(-50%);
+font-size: 20px;
+color: #000; /* Changer la couleur selon votre besoin */
+}
+
+
+.wrapper .remember-forgot {
+display: flex;
+justify-content: space-between;
+font-size: 14.5px;
+margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+accent-color: #fff;
+margin-right: 3px;
+}
+
+.remember-forgot a {
+text-decoration: none;
+color: #1247d6e0;
+}
+
+.remember-forgot a:hover {
+text-decoration: underline;
+}
+
+.wrapper .btn {
+width: 100%;
+height: 45px;
+background: rgb(182, 182, 182);
+border: none;
+outline: none;
+border-radius: 40px;
+box-shadow: 0 0 0px rgba(0, 0, 0, 1);
+cursor: pointer;
+font-size: 16px;
+color: #333;
+font-weight: 600;
+}
+.register-link{
+margin-top: 20px;
+}
+ .register-link p a {
+  margin-top: 20px;
+ font-weight: 600;
+ text-decoration: none;
+ }
+ .register-link p a :hover{
+ text-decoration: underline;
+ }
+  </style>
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <h1 style="color:rgb(13, 53, 103); ">Settings</h1>
+        
+        <div class="input-box">
+          <input type="text" placeholder="Phone_Number" required>
+          <i class='bx bxs-phone'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="New_Password" required>
+          <i class='bx bxs-lock' ></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Confirm Password" required>
+          <i class='bx bxs-lock' ></i>
+        </div>
+        <a href="login" class="text-black fs-6"(click)="gotoLogin()">Save</a>
+      </form>
+  
+    </div>
+  
+  </body>
