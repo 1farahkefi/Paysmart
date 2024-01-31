@@ -11,6 +11,7 @@ import { HelpsComponent } from './helps/helps.component';
 
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/paysmart', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent},
   {path: 'paysmart', component: HeaderComponent},
